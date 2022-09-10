@@ -1,0 +1,103 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% block title %}
+       
+<title>{{ title }}</title>
+
+{% endblock title%}
+
+{% block header %}
+
+<h1> {{header}} </h1>
+
+{% endblock header %}
+
+{% block content %}
+
+<div align = 'center'>
+
+</div>
+
+{{content}}
+<div class="container px-5">
+    <div class="row"><p></p></div>
+	<div class="row">
+        <div class="col-4 p-0 mt-3"></div>
+		<div class="col-4 p-0 mt-3 text-secondary">
+            <h1 class="h4 mb-3 fw-normal">{% trans 'User page' %} <b>{{ user }}</b></h1>
+ 
+            {% if messages %}
+            <div class="alert alert-success" role="alert">            
+                <ul class="messages ">
+                    {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                        {{ message }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}        
+            
+            <form method="post" href="{% url 'user_page' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+              
+                <!-- user profile BEGIN -->
+                <fieldset>
+                    <legend class="h5 mb-3 fw-normal">{% trans 'user profile:' %}</legend>
+                    
+                    {% if profile_form.error_messages %}
+                    {% for error in profile_form.non_field_errors %}
+                    <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                    {% endfor %}    
+                    {% endif %} 
+
+                    {% for field in profile_form %}
+                    <div class="form-floating mb-1">
+                        {{field}}
+                        <label for="{{field.name}}">{{field.label}}</label>
+                        {% if field.errors %}
+                        <div class="alert alert-danger mt-1">{{ field.errors }}</div>
+                        {% endif %}                                        
+                    </div>
+                    {% endfor %}
+                </fieldset>
+                 <!-- user profile END -->
+
+                <!-- user settings BEGIN -->
+                <fieldset>
+                    <legend class="h5 mb-3 fw-normal">{% trans 'user settings:' %}</legend>
+                    
+                    {% if settings_form.error_messages %}
+                    {% for error in settings_form.non_field_errors %}
+                    <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                    {% endfor %}    
+                    {% endif %} 
+
+                    {% for field in settings_form %}
+                    <div class="form-floating mb-1">
+                        {{field}}
+                        <label for="{{field.name}}">{{field.label}}</label>
+                        {% if field.errors %}
+                        <div class="alert alert-danger mt-1">{{ field.errors }}</div>
+                        {% endif %}                                        
+                    </div>
+                    {% endfor %}
+                </fieldset>
+                 <!-- user settings END -->
+
+                <button class="w-100 mt-3 btn btn-outline-success" type="submit">{% trans 'Save changes' %}</button>
+            </form>
+        </div>
+        <div class="col-4 p-0 mt-3"></div>
+    </div>
+</div>
+<p></p>
+
+
+
+{% endblock %}
