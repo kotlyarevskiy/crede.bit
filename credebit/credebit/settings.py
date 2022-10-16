@@ -11,19 +11,24 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+dotenv_path = os.path.join(BASE_DIR.parent, '.env')
+load_dotenv(dotenv_path)  # loads the configs from .env
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)q98c+t+3_c)puqshl*7xr#46&zxi*7a=^c-+hx#z&7lqnu_of'
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = str(os.getenv('DEBUG'))
 
 ALLOWED_HOSTS = []
 
@@ -72,12 +77,18 @@ WSGI_APPLICATION = 'credebit.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+print(str(os.getenv('DATABASE_NAME')))
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    "default": {
+        "ENGINE":   "mssql",
+        "NAME":     str(os.getenv('DATABASE_NAME')),
+        "USER":     str(os.getenv('DATABASE_USER')),
+        "PASSWORD": str(os.getenv('DATABASE_PASSWORD')),
+        "HOST":     str(os.getenv('DATABASE_HOST')),
+        "PORT":     str(os.getenv('DATABASE_PORT')),
+        "OPTIONS":  {"driver": "ODBC Driver 17 for SQL Server", 
+        },
+    },
 }
 
 
