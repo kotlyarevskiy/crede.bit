@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-19 22:59+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+#: .\_templates\_base.html:40 .\credebit\views.py:14 .\credebit\views.py:15
+msgid "About me"
+msgstr ""
+
+#: .\_templates\_base.html:45 .\credebit\views.py:20 .\credebit\views.py:21
+msgid "Contacts"
+msgstr "Контакти"
+
+#: .\_templates\_base.html:71
+msgid "not authorized"
+msgstr "не авторизовано"
+
+#: .\_templates\_base.html:78
+msgid "Admin panel"
+msgstr ""
+
+#: .\_templates\_base.html:82 .\_templates\auth\user_page.html:27
+#: .\app_auth\views.py:42 .\app_auth\views.py:43
+msgid "User page"
+msgstr ""
+
+#: .\_templates\_base.html:85
+msgid "Logout"
+msgstr ""
+
+#: .\_templates\_base.html:89 .\_templates\auth\registration.html:50
+#: .\app_auth\views.py:69 .\app_auth\views.py:70
+msgid "Login"
+msgstr ""
+
+#: .\_templates\_base.html:92 .\app_auth\views.py:109 .\app_auth\views.py:110
+msgid "Registration"
+msgstr ""
+
+#: .\_templates\_base.html:123 .\_templates\_base.html:125
+msgid "Search"
+msgstr ""
+
+#: .\_templates\auth\login.html:28
+msgid "Please sign in"
+msgstr ""
+
+#: .\_templates\auth\login.html:47
+msgid "Sign in"
+msgstr ""
+
+#: .\_templates\auth\login.html:48
+msgid "Don`t have an account"
+msgstr ""
+
+#: .\_templates\auth\login.html:48
+msgid "Register"
+msgstr ""
+
+#: .\_templates\auth\registration.html:30
+msgid "Registration form"
+msgstr ""
+
+#: .\_templates\auth\registration.html:49
+msgid "Sign up"
+msgstr ""
+
+#: .\_templates\auth\registration.html:50
+msgid "Already have an account"
+msgstr ""
+
+#: .\_templates\auth\user_page.html:47
+msgid "user profile:"
+msgstr ""
+
+#: .\_templates\auth\user_page.html:71
+msgid "user settings:"
+msgstr ""
+
+#: .\_templates\auth\user_page.html:93
+msgid "Save changes"
+msgstr ""
+
+#: .\app_auth\forms.py:18 .\app_auth\forms.py:31 .\app_auth\forms.py:44
+#: .\app_auth\forms.py:56
+msgid "Enter username..."
+msgstr ""
+
+#: .\app_auth\forms.py:19 .\app_auth\forms.py:32
+msgid "Enter password..."
+msgstr ""
+
+#: .\app_auth\forms.py:20
+msgid "Confirm password..."
+msgstr ""
+
+#: .\app_auth\forms.py:21
+msgid "Enter your email..."
+msgstr ""
+
+#: .\app_auth\forms.py:22
+msgid "Enter some parameter..."
+msgstr ""
+
+#: .\app_auth\models.py:15 .\app_auth\models.py:36
+msgid "user"
+msgstr ""
+
+#: .\app_auth\models.py:16
+msgid "email"
+msgstr ""
+
+#: .\app_auth\models.py:23
+msgid "User profile"
+msgstr ""
+
+#: .\app_auth\models.py:24
+msgid "User profile data"
+msgstr ""
+
+#: .\app_auth\models.py:43 .\app_auth\models.py:44
+msgid "User settings"
+msgstr ""
+
+#: .\app_auth\views.py:36
+msgid "The changes have been saved."
+msgstr ""
+
+#: .\credebit\settings.py:159
+msgid "English"
+msgstr ""
+
+#: .\credebit\settings.py:160
+msgid "Ukrainian"
+msgstr ""
+
+#: .\credebit\views.py:8 .\credebit\views.py:9
+msgid "Main page"
+msgstr ""
